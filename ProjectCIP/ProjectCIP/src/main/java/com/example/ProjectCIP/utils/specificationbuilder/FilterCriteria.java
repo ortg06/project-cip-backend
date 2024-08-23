@@ -3,8 +3,8 @@ package com.example.ProjectCIP.utils.specificationbuilder;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.lang.NonNull;
+import jakarta.persistence.criteria.JoinType;
 
-import javax.persistence.criteria.JoinType;
 import java.io.Serializable;
 
 /**

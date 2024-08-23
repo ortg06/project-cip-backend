@@ -1,16 +1,12 @@
 package com.example.ProjectCIP.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * The persistent class for the PAISES database table.
@@ -35,5 +31,9 @@ public class Pais implements Serializable {
 
     @Column(name = "NOMBRE_PAIS_ABR")
     private String nombrePaisAbr;
+
+    @OneToMany(mappedBy = "pais")
+    @OrderBy("nombreDepartamento ASC")
+    private List<Departamento> departamentos;
 
 }

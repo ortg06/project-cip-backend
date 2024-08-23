@@ -1,17 +1,16 @@
 package com.example.ProjectCIP.utils.specificationbuilder;
 
-import bcr.sfce.export.registro.utils.Constants;
+import com.example.ProjectCIP.utils.Constants;
 import lombok.AllArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 
-import javax.persistence.criteria.*;
+import jakarta.persistence.criteria.*;
 import java.util.Collection;
 
 /**
  * <p>
  * Class which implements {@link Specification} interface
  * to generate {@link Predicate} object
- * by checking given {@link com.kodgemisi.specification.FilterCriteria} object
  * </p>
  *
  * @param <T>

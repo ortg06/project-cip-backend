@@ -8,7 +8,7 @@ import lombok.ToString;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "SERVICIOS")
+@Table(name = "SERVICIO")
 @ToString
 @EqualsAndHashCode(callSuper = false)
 @Data
