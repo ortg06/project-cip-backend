@@ -47,6 +47,7 @@ public class Constants {
     public static final String MSG_REGISTRO_YA_EXISTE_EXPORTADOR = "El Exportador que esta intentando registrar ya existe.";
 
     public static final String MSG_ELIMINAR_ACTIVIDAD_PRINCIPAL = "La Actividad es Principal, no se puede eliminar modifique la información para eliminarla";
+    public static final String MSG_GUARDADO = "Registro guardado exitosamente.";
 
     private Constants() {
         throw new IllegalStateException("Constants class must not be instantiated!");
