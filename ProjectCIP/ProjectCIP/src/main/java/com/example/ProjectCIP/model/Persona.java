@@ -140,21 +140,30 @@ public class Persona implements Serializable {
     @Column(name = "TIEMPO_TRATAMIENTO")
     private String tiempoTratamiento;
 
+    @Column(name = "PADECE_ENFERMEDAD")
+    private String padeceEnfermedad;
+
+    @Column(name = "EXISTE_ANTECEDENTE_PSI")
+    private String existeAntecedentePsi;
+
+    @Column(name = "TRATAMIENTO_PSICO_ACTUAL")
+    private String tratamientoPsicoActual;
+
+    @Column(name = "ASISTIO_CONSULTA_PSI")
+    private String asistioConsultaPsi;
+
     @ManyToOne
     @JoinColumn(name = "SERVICIO_SOLICITA")
     private Servicio servicio;
-
-    @ManyToOne
-    @JoinColumn(name = "ESTADO")
-    private Estado estado;
 
     @Column(name = "ANIO_CONSULTA_ANTERIOR")
     @DateTimeFormat(pattern = Constants.DATE_FORMAT)
     private LocalDate anioConsultaAnterior;
 
-     /*@ManyToOne
-    @JoinColumn(name = "CODIGO_ANTECEDENTE")
-    private AntecedentePsiquiatrico codigoAntecedente;*/
+    @ManyToOne
+    @JoinColumn(name = "ESTADO")
+    private Estado estado;
+
 
 
 
