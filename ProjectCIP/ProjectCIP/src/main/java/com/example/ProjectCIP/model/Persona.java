@@ -40,12 +40,12 @@ public class Persona implements Serializable {
     private String nacionalidad;
 
     @Column(name = "ESTADO_CIVIL")
-    private Long estadoCivil;
+    private String estadoCivil;
 
     @Column(name = "LUGAR_NACIMIENTO")
     private String lugarNacimiento;
 
-    @Column(name = "DUC")
+    @Column(name = "DUI")
     private Long dui;
 
     @Column(name = "TELEFONO1")
@@ -152,6 +152,25 @@ public class Persona implements Serializable {
     @Column(name = "ASISTIO_CONSULTA_PSI")
     private String asistioConsultaPsi;
 
+    @Column(name = "OCUPACION")
+    private String ocupacion;
+
+    @Column(name = "VIVE_CON")
+    private String viveCon;
+
+    @Column(name = "RANGO_SALARIO")
+    private String rangoSalario;
+
+    @Column(name = "TIENE_FAM_DEPENDIENTE")
+    private String tieneFamDependiente;
+
+    @Column(name = "PACIENTE_DESDE")
+    @DateTimeFormat(pattern = Constants.DATE_FORMAT)
+    private LocalDate  pacienteDesde;
+
+    @Column(name = "ORIGEN")
+    private String origen;
+
     @ManyToOne
     @JoinColumn(name = "SERVICIO_SOLICITA")
     private Servicio servicio;
@@ -164,7 +183,11 @@ public class Persona implements Serializable {
     @JoinColumn(name = "ESTADO")
     private Estado estado;
 
+    @ManyToOne
+    @JoinColumn(name = "COD_INFO_ADICIONAL")
+    private InfoAdicionalEntrevista infoAdicionalEntrevista;
 
-
-
+    @Column(name = "FECHA_INACTIVO")
+    @DateTimeFormat(pattern = Constants.DATE_FORMAT)
+    private LocalDate fechaInactivo;
 }
